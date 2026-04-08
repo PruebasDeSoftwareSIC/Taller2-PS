@@ -29,7 +29,7 @@ jobs:
 
       # 3. Instalar dependencias
       - name: Install deps
-        run: pip install pytest
+        run: pip install -r requirements.txt
 
       # 5. Pruebas unitarias
       - name: Run tests
