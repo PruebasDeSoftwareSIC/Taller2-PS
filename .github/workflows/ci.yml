@@ -1,8 +1,4 @@
-name: CI-CD-Pipeline
-
-# Permisos para que github-actions[bot] pueda hacer push a gh-pages
-permissions:
-  contents: write
+name: CI-Pipeline
 
 on:
   push:
@@ -11,9 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-
-  # 1. JOB BUILD (con los 8 pasos)
-  build:
+  ci:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,6 +25,6 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
-      # 5. Pruebas unitarias
+      # 5. Prueba de integración
       - name: Run tests
         run: pytest test_integration_with_fake.py -v
