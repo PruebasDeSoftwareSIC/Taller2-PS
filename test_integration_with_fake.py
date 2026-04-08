@@ -1,7 +1,6 @@
 from order_service import create_order
 from database import SessionLocal
 from models import Order
-from user_repository import FakeUserRepository
 
 # ---- Fake usado en la APP ----
 class FakeUserRepository:
